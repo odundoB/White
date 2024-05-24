@@ -1,0 +1,112 @@
+/* blog/static/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background for the whole blog */
+    color: #333;
+}
+
+header {
+    background: #333; /* Background color for the header */
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height: 300px; /* Adjusted height for the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header img {
+    max-width: 50%; /* Reduced maximum width of the image */
+    height: auto;
+    object-fit: contain; /* Ensure the image is fully visible */
+    margin-top: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Reduced font size for title */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.6); /* Added background color to title for readability */
+    display: inline-block; /* Fit background to text */
+    padding: 0.5rem 1rem; /* Add padding to the title */
+    border-radius: 5px; /* Slightly round the corners of the title background */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Background color for the welcome text */
+    padding: 0.5rem;
+    border-radius: 5px; /* Slightly round the corners of the welcome text background */
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.blog-posts {
+    margin: 2rem 0;
+}
+
+.blog-posts .post {
+    background: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts .post:nth-child(odd) {
+    background: #f0f0f0;
+}
+
+.blog-posts .post h2 {
+    margin-top: 0;
+}
+
+.blog-posts .post p {
+    font-size: 1rem;
+}
+
+.blog-posts .post small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+form {
+    margin: 2rem 0;
+}
+
+form p {
+    margin: 0.5rem 0;
+}
+
+form button {
+    background: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #e14e27;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHITE AUTOMOTIVE BLOG</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-image-container">
+            <img class="header-image" src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Header Image">
+        </div>
+        <div class="header-content">
+            <h1>White Automotive Company</h1>
+            <p>Welcome to our blog! Stay tuned for updates and exciting stories from White Automotive Company.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="blog-posts">
+            {% for post in posts %}
+                <div class="post">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.content }}</p>
+                    <small>Posted by {{ post.author }} on {{ post.created_at|date:"F j, Y, g:i a" }}</small>
+                </div>
+            {% endfor %}
+        </div>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Join our mailing list to receive the latest news, updates.</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Subscribe</button>
+        </form>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
